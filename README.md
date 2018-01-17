@@ -12,7 +12,7 @@ Recursos empleados en el desarrollo del reto:
 - Planificación del proyecto: Trello, Balsamiq Cloud
 - Desarrollo e implementación: javascript, jQuery, Bootstrap 4
 - Backend: Firebase
-![Trabajando con el Trello](assets/docs/trello.png "titulo")
+![Trabajando con el Trello](assets/docs/Trello.png "titulo")
 
 + Sesión 1 día 16/01/2018
 Coordinación entre las integrantes del equipo, mediante lluvia de ideas para la elección de una problématica no solucionada de los
@@ -27,18 +27,18 @@ empleabilidad del producto.
 
 ![Imagen 1][1]  ![Imagen 2][2]
 
- [1]: assets/docs/cinekids1.png
- [2]: assets/docs/cinekids1.png
+ [1]: assets/docs/cinekids1.jpeg
+ [2]: assets/docs/cinekids1.jpeg
 
  ![Imagen 3][3]  ![Imagen 4][4]
 
- [1]: assets/docs/cinekids3.png
- [2]: assets/docs/cinekids4.png
+ [1]: assets/docs/cinekids3.jpeg
+ [2]: assets/docs/cinekids4.jpeg
 
  ![Imagen 5]5[]  ![Imagen 6][6]
 
- [1]: assets/docs/cinekids5.png
- [2]: assets/docs/cinekids6.png
+ [1]: assets/docs/cinekids5.jpeg
+ [2]: assets/docs/cinekids6.jpeg
 
  + Logros obtenidos dentro de cada área trabajada el día 16/01/2018
  Yanira Arenazas y Jessica Meza: Recobro de data desde OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=992446a3

@@ -15,15 +15,20 @@ function changingBlanks(tag) {
     }
   }
   newText = newText.join('');
-  console.log(newText);
+  //  console.log(newText);
 }
 function begin() {
   $('#search').on('click', function() {
+    $('#information').empty();
     var imgMovie = '';
     var tag = $('#input-search').val();
     changingBlanks(tag);
-    $.getJSON('http://www.omdbapi.com/?apikey=3a181f1c&t=' + tag, function(data) {
-      var keys = Object.keys(data);
+    var tittleOne = '';
+    $.getJSON('http://www.omdbapi.com/?apikey=3a181f1c&s=' + tag + '&type=movie', function(data) {
+      tittleOne = data.Search[0].imdbID;
+      console.log(tittleOne);
+
+      /*  var keys = Object.keys(data);
       for (var i = 0; i < keys.length; i++) {
         if (i === 2 || i === 13 || i === 14 || i === 15 || i === 16 || i === 17 || i === 18 || i === 19 || i === 20 || i === 21 || i === 24) {
           i++;
@@ -31,7 +36,7 @@ function begin() {
         $('#information').append(
           '<p>' + Object.keys(data)[i] + ':' + data[keys[i]] + '</p>'
         );
-      }
+      }*/
       $.each(data, function(i, Poster) {
         if (i === 'Poster') {
           imgMovie += '<div class="cuadro">';
@@ -40,13 +45,20 @@ function begin() {
         }
       });
       $('#container-images').html(imgMovie);
-      console.log(data.length);
+      //  console.log(data.length);
 
-      var keys = Object.keys(data);
-      console.log(data[keys[13]]);
-      console.log(keys[13]);
-      console.log(Object.keys(data)[0]);
+      //  var keys = Object.keys(data);
+      //  console.log(data[keys[13]]);
+      //  console.log(keys[13]);
+      //  console.log(Object.keys(data)[0]);
       console.table(data);
     });
+    $.getJSON('http://www.omdbapi.com/?apikey=3a181f1c&i=' + tittleOne + '&type=movie', function(dataDos) {
+      var keys = Object.keys(dataDos);
+      console.log(dataDos);
+      console.log(Object.keys(dataDos)[2]);
+      console.log(dataDos[keys[2]]);
+    });
+    $('#input-search').val('');
   });
 }

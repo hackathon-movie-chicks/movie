@@ -24,22 +24,20 @@ empleabilidad del producto.
 - Yanira Arenazas y Jessica Meza: documentación y desarrollo utilizando javascript, JQuery
 - Nataly Ortiz: Maquetado con Bootstrap
 - Daphne Cáceres: Sketchado y testeo de los primeros drafts
-
- ![Sin título](assets/docs/Trello.png "titulo")
  
- ![Sin título](assets/docs/cinekids1.jpeg "titulo")
+ ![Sin título](assets/docs/cine-kids1.jpeg "titulo")
 
- ![Sin título](assets/docs/cinekids2.jpeg "titulo")
+ ![Sin título](assets/docs/cine-kids2.jpeg "titulo")
  
-![Sin título](assets/docs/cinekids3.jpeg "titulo")
+![Sin título](assets/docs/cine-kids3.jpeg "titulo")
 
-![Sin título](assets/docs/cinekids4.jpeg "titulo")
+![Sin título](assets/docs/cine-kids4.jpeg "titulo")
 
-![Sin título](assets/docs/cinekids5.jpeg "titulo")
+![Sin título](assets/docs/cine-kids5.jpeg "titulo")
 
-![Sin título](assets/docs/cinekids6.jpeg "titulo")
+![Sin título](assets/docs/cine-kids6.jpeg "titulo")
 
-![Sin título](assets/docs/cinekids7.jpeg "titulo")
+![Sin título](assets/docs/cine-kids7.jpeg "titulo")
 
  + Logros obtenidos dentro de cada área trabajada el día 16/01/2018
  Yanira Arenazas y Jessica Meza: Recobro de data desde OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=992446a3

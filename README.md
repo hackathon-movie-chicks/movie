@@ -25,20 +25,21 @@ empleabilidad del producto.
 - Nataly Ortiz: Maquetado con Bootstrap
 - Daphne Cáceres: Sketchado y testeo de los primeros drafts
 
-![Imagen 1][1]  ![Imagen 2][2]
+ ![Sin título](assets/docs/Trello.png "titulo")
+ 
+ ![Sin título](assets/docs/cinekids1.jpeg "titulo")
 
- [1]: assets/docs/cinekids1.jpeg
- [2]: assets/docs/cinekids1.jpeg
+ ![Sin título](assets/docs/cinekids2.jpeg "titulo")
+ 
+![Sin título](assets/docs/cinekids3.jpeg "titulo")
 
- ![Imagen 3][3]  ![Imagen 4][4]
+![Sin título](assets/docs/cinekids4.jpeg "titulo")
 
- [1]: assets/docs/cinekids3.jpeg
- [2]: assets/docs/cinekids4.jpeg
+![Sin título](assets/docs/cinekids5.jpeg "titulo")
 
- ![Imagen 5]5[]  ![Imagen 6][6]
+![Sin título](assets/docs/cinekids6.jpeg "titulo")
 
- [1]: assets/docs/cinekids5.jpeg
- [2]: assets/docs/cinekids6.jpeg
+![Sin título](assets/docs/cinekids7.jpeg "titulo")
 
  + Logros obtenidos dentro de cada área trabajada el día 16/01/2018
  Yanira Arenazas y Jessica Meza: Recobro de data desde OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=992446a3

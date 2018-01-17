@@ -19,18 +19,34 @@ function changingBlanks(tag) {
 }
 function begin() {
   $('#search').on('click', function() {
-    var text = '';
+    var imgMovie = '';
     var tag = $('#input-search').val();
     changingBlanks(tag);
     $.getJSON('http://www.omdbapi.com/?apikey=3a181f1c&t=' + tag, function(data) {
+      var keys = Object.keys(data);
+      for (var i = 0; i < keys.length; i++) {
+        if (i === 2 || i === 13 || i === 14 || i === 15 || i === 16 || i === 17 || i === 18 || i === 19 || i === 20 || i === 21 || i === 24) {
+          i++;
+        }
+        $('#information').append(
+          '<p>' + Object.keys(data)[i] + ':' + data[keys[i]] + '</p>'
+        );
+      }
       $.each(data, function(i, Poster) {
         if (i === 'Poster') {
-          text += '<div class="cuadro">';
-          text += '<img src="' + data.Poster + '"/>';
-          text += '</div>';
+          imgMovie += '<div class="cuadro">';
+          imgMovie += '<img src="' + data.Poster + '"/>';
+          imgMovie += '</div>';
         }
       });
-      $('#container-images').html(text);
+      $('#container-images').html(imgMovie);
+      console.log(data.length);
+
+      var keys = Object.keys(data);
+      console.log(data[keys[13]]);
+      console.log(keys[13]);
+      console.log(Object.keys(data)[0]);
+      console.table(data);
     });
   });
 }

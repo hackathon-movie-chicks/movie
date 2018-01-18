@@ -1,3 +1,11 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 .poster-movie {
   vertical-align: top;
   height: 100px;
@@ -9,12 +17,33 @@ img {
   width: 100%;
 }
 
+.grey-text {
+  color: rgba(128, 128, 128, 0.808);
+}
+
+.prueba {
+  background-image: url(../assets/images/prueba1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-color {
+  background-color: #60c0fb;
+}
+
+.border {
+  border: 5px solid white !important;
+}
+
 .bg {
 	background-position:center bottom;
 	background-repeat:no-repeat;
   background-size:cover;
-  height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
+
 
 .bg-gif {
   background-image: url('../assets/images/fondo-inicial.gif')
@@ -22,6 +51,8 @@ img {
 
 .bg-login {
   background-image: url('../assets/images/fondo-login.png');
+  background-size: cover;
+  height: 100vh;
 }
 
 .centrar {
@@ -36,3 +67,50 @@ img {
   height: 450px;
 }
 
+img.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* */
+
+.white-text {
+  color: #ffff;
+}
+
+.red-text {
+  color: #ff3435;
+}
+
+.red {
+  background-color: #ff3435;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.btn-signIn {
+  background: linear-gradient(to bottom right, rgb(255, 166, 1), rgb(251, 255, 0));
+}
+
+div.line-white::after {
+  display: inline-block;
+  margin: 0 0 5px 10px;
+  height: 3px;
+  content: " ";
+  background-color:#ffff;
+  width: 40%;
+}
+
+div.line-white::before {
+  display: inline-block;
+  margin: 0 10px 5px 0;
+  height: 3px;
+  content: " ";
+  background-color: #ffff;
+  width: 40%;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MovieKids</title>
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Icono que aparece junto al title -->
+  <link rel="Shortcut Icon" href="../assets/images/cameraMK.ico"/>
+  <script src="https://use.fontawesome.com/585d303aa0.js"></script>
+</head>
+<body class="bg-fondo">
+  <nav class="navbar navbar-expand-xs grey">
+    <a class="navbar-brand col-1" href="#"><img src="../assets/images/logokids.png"  class="img-logo centrar center-block" alt=""></a>    
+    <a class="navbar brand col-1 mr-auto white-text" href="game.html"><span class="fa fa-gamepad" aria-hidden="true"></span></a>
+    <div id="navbarTogglerDemo03">
+      <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <span id="name-user" class="d-none d-md-inline-block">nombre de usuario</span><img id="photo-user" class="d-lg-inline-flex img-user" alt="">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Favoritos</a>
+        <a class="dropdown-item" href="#">Agregar lista</a>
+        <a id="signOut" class="dropdown-item" href="#">Cerrar</a>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <div class="row p-4 m-0">
+      <div class="form-inline-block my-2 my-lg-0   col-md-8">
+        <input id="title" class="form-control mr-sm-0" type="search" placeholder="Ejemplo: barbie" aria-label="Search">
+        <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-3 form-inline-block col-6 offset-3" type="submit">Search</button>
+        <div id="results" class="col-md-5">
+        </div>
+      </div>
+      <div class="col-md-4 p-5">
+        <div class="row centrar">
+          <div class="card rounded">
+            <div class="card-body">
+              <h3 class="card-title text-center">Filtros</h3>
+              <hr>
+              <br>
+              <h5>Clasificación</h5>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Apto para los más pequeños de 2 a 6 años (TV-Y)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Audiencia General (G)-(TV-G)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Niños de 7 años a más(TV-Y7)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Acompañado de un adulto (TV-PG)
+                </label>
+              </div>
+              <br>
+              <h5> Estudios Cinematograficos</h5>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Cartoon Networks
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Century Fox / Fox
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Disney Pictures
+                </label>
+              </div>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  DreamWorks Pictures
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Ilumination
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Nickelodeon
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Pixar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                 Universal Cartoon Studios 
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Warner Bros Entertainment
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                <label class="form-check-label" for="defaultCheck">
+                  Otros
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
+  <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>  
+  <!-- <script src="../js/autentication.js"></script> -->
+  <script src="../js/autentication.js"></script> 
+  <script src="../js/app.js"></script>    
+</body>
+</html>

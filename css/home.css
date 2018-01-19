@@ -16,6 +16,20 @@ li {
   margin: 25px 15px 25px 15px;
 }
 
+.w-h-example-mini {
+  width: 100px;
+}
+
+.li-images {
+  cursor: pointer;
+  float: left;
+  width: 30%;
+}
+
+.list-group {
+  width: 100%;
+}
+
 /* imagenes de los logos */
 
 .logo {
@@ -33,7 +47,7 @@ span.fa {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  
+
 }
 
 /* Colores */

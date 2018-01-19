@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
   <title>CineKids</title>
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-reboot.min.css">
@@ -126,6 +127,162 @@
                 <label class="form-check-label" for="defaultCheck">
                   Otros
                 </label>
+=======
+  <title>MovieKids</title>
+
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <script src="https://use.fontawesome.com/585d303aa0.js"></script>
+  <!-- Icono que aparece junto al title -->
+  <link rel="Shortcut Icon" href="../assets/icons/movie-kids.ico"/>
+</head>
+<body class="bg-fondo">
+  <nav class="navbar navbar-expand-lg grey fixed-top navbar-light">
+    <a class="d-none d-sm-none d-md-inline-flex d-lg-inline-flex d-xl-inline-flex col-md-3 col-lg-2 col-xl-2" href="#"><img class="col-12" src="../assets/images/logokids.png"></a>
+    <a class="col-sm-5 col-6 d-inline-flex d-sm-inline-flex d-md-none d-lg-none d-xl-none" href="#"><img class="col" src="../assets/images/cameraMK.png"></a>
+    <div class="col-5 d-none d-sm-none d-md-none d-lg-inline-flex d-xl-inline-flex">
+      <input id="title" class="col-10 form-control" type="search" placeholder="¿Qué película estas buscando?" aria-label="Search">
+      <div id="searchBtn" class="col-1 form-control-append">
+        <a class="fa fa-search" aria-hidden="true"></a>
+      </div>
+    </div>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="row">
+        <img class="d-lg-inline-flex wh-user-example" src="../assets/images/user-example.jpg">
+        <span class="ml-2 d-none d-sm-none d-md-inline-flex d-lg-inline-flex d-xl-inline-flex centrar" id="name-user"> nombre de usuario</span>
+      </div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="col-1 navbar-nav ml-auto mr-auto d-none d-sm-none d-md-none d-lg-inline-flex d-xl-inline-flex">
+        <div class="row">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span  class="fa fa-bars black-text" aria-hidden="true"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><span class="fa fa-star" aria-hidden="true"></span> Favoritos <span class="float-right fa fa-ellipsis-v" aria-hidden="true"></span></a>
+              <a class="dropdown-item" href="#"><span class="fa fa-plus-circle" aria-hidden="true"></span> Añadir una lista </a>
+            </div>
+          </li>
+        </div>
+      </ul>
+      <ul class="col-7 navbar-nav mr-auto d-none d-sm-none d-md-none d-lg-inline-flex d-xl-inline-flex">
+        <li class="nav-item dropdown mr-auto">
+          <a class="nav-link dropdown-toggle black-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="row">
+              <img class="d-lg-inline-flex wh-user-example" src="../assets/images/user-example.jpg" alt="">
+              <span class="ml-2 centrar" id="name-user"> nombre de usuario</span>
+            </div>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Salir <span class="float-right fa fa-power-off" aria-hidden="true"></span></a>
+          </div>
+        </li>
+      </ul>
+      <ul class="col-12 navbar-nav d-inline-flex d-sm-inline-flex d-md-inline-flex d-lg-none d-xl-none">
+        <li class="nav-item dropdown">
+          Salir
+        </li>
+        <li class="nav-item dropdown">
+          Favoritos
+        </li>
+        <li class="nav-item dropdown">
+          Añadir una lista
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="pt-5">
+    <div class="container-fluid pt-5">
+      <div class="row mt-5 ">
+        <div class="col-lg-8">
+            <h3>Resultados</h3><br>
+            <ul id="results" class="list-group"></ul>
+            <ul id="results-checkboxs" class="list-group"></ul>
+            <div id="modals"">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row justify-content-center">
+            <div class="card rounded" style="width: 18rem;">
+              <div class="card-body">
+                <h3 class="card-title text-center">Filtros</h3>
+                <hr>
+                <br>
+                <h5>Clasificación</h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="TV-Y" id="rated3">
+                  <label class="form-check-label" for="defaultCheck">
+                    Apto para los más pequeños de 2 a 6 años (TV-Y)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="TV-Y7" id="rated2">
+                  <label class="form-check-label" for="defaultCheck">
+                    Niños de 7 años a más(TV-Y7)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="G" id="rated1">
+                  <label class="form-check-label" for="defaultCheck">
+                    Audiencia General (G)-(TV-G)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="PG" id="rated4">
+                  <label class="form-check-label" for="defaultCheck">
+                    Acompañado de un adulto (TV-PG)
+                  </label>
+                </div>
+                <br>
+                <h5> Estudios Cinematograficos</h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Cartoon" id="prod3">
+                  <label class="form-check-label" for="defaultCheck">
+                    Cartoon Networks
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Disney" id="prod1">
+                  <label class="form-check-label" for="defaultCheck">
+                    Disney Pictures
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Dreamworks" id="prod2">
+                  <label class="form-check-label" for="defaultCheck">
+                    DreamWorks Pictures
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Illumination" id="prod7">
+                  <label class="form-check-label" for="defaultCheck">
+                    Illumination
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Pixar" id="prod5">
+                  <label class="form-check-label" for="defaultCheck">
+                    Pixar
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Universal" id="prod4">
+                  <label class="form-check-label" for="defaultCheck">
+                   Universal Cartoon Studios
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Warner" id="prod6">
+                  <label class="form-check-label" for="defaultCheck">
+                    Warner Bros Entertainment
+                  </label>
+                </div>
+>>>>>>> 55d088bab7fdcbf4ae5505aae9aa4609ca1d8ab5
               </div>
             </div>
           </div>
@@ -133,6 +290,7 @@
       </div>
     </div>
   </section>
+<<<<<<< HEAD
 
   
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
@@ -144,3 +302,37 @@
   <script src="../js/app.js"></script>    
 </body>
 </html>
+=======
+  <!-- Modal -->
+  <div class="modal fade" id="modal-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="name-movie"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="img-movie" src="../assets/images/cine.jpg" class="img-two">
+          <p id="actors-movie"></p>
+          <p id="plot-movie"></p>
+          <p id="year-movie"></p>
+          <p id="rated-movie"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Agregar a Lista</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script type="text/javascript" src="../js/home.js"></script>
+</body>
+</html>
+>>>>>>> 55d088bab7fdcbf4ae5505aae9aa4609ca1d8ab5

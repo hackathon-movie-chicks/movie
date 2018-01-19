@@ -1,6 +1,20 @@
 $(document).ready(function() {
   var $inputSearch = $('#title');
   var $btnSearch = $('#searchBtn');
+  var $btnFilter = $('#btn-filter');
+  var $showFilter = $('#filter-movile');
+  var $closeFilter = $('#closeFilter');
+
+  $btnFilter.click(function() {
+    $showFilter.removeClass('d-none');
+    $showFilter.addClass('d-inline-flex');
+  });
+
+  $closeFilter.click(function() {
+    $showFilter.removeClass('d-inline-flex');
+    $showFilter.addClass('d-none');
+  });
+
   $btnSearch.click(searchByTitle);
   function searchByTitle() {
     var movieTitle = $inputSearch.val();

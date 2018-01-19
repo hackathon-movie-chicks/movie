@@ -3,6 +3,12 @@
   height: 100px;
 }
 
+.img-modal {
+  display: block;
+  width: 100px;
+  margin: auto;
+}
+
 /* index */
 img {
   width: 100%;
@@ -153,7 +159,7 @@ span.fa {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  
+
 }
 
 /* Colores */

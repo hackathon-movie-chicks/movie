@@ -1,11 +1,3 @@
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
-
 .poster-movie {
   vertical-align: top;
   height: 100px;
@@ -66,7 +58,6 @@ img {
   height: 450px;
 }
 
-<<<<<<< HEAD
 /* home */
 
 .img-logo {
@@ -190,52 +181,3 @@ div.form-check {
   margin-bottom: 15px;
   margin-top: 15px;
 }
-=======
-img.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-/* */
-
-.white-text {
-  color: #ffff;
-}
-
-.red-text {
-  color: #ff3435;
-}
-
-.red {
-  background-color: #ff3435;
-}
-
-.bold {
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.btn-signIn {
-  background: linear-gradient(to bottom right, rgb(255, 166, 1), rgb(251, 255, 0));
-}
-
-div.line-white::after {
-  display: inline-block;
-  margin: 0 0 5px 10px;
-  height: 3px;
-  content: " ";
-  background-color:#ffff;
-  width: 40%;
-}
-
-div.line-white::before {
-  display: inline-block;
-  margin: 0 10px 5px 0;
-  height: 3px;
-  content: " ";
-  background-color: #ffff;
-  width: 40%;
-}
->>>>>>> 55d088bab7fdcbf4ae5505aae9aa4609ca1d8ab5

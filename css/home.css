@@ -3,9 +3,6 @@ li {
   display: inline-block;
 }
 
-.opacity {
-  background: rgba(0,0,0, .5) 
-}
 
 .dropdown-toggle::after {
   display: none;
@@ -54,4 +51,19 @@ span.fa {
 
 div.form-check {
   margin-bottom: 5px;
+}
+
+.bg-fondo {
+  background-image: url(../assets/images/fondo-home.jpg);
+  background-size: cover;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grey {
+  background-color: #9e9e9e;
 }

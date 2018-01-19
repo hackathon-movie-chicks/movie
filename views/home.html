@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CineKids</title>
+  <title>MovieKids</title>
   
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-reboot.min.css">
@@ -14,23 +14,24 @@
   <!-- Icono que aparece junto al title -->
   <link rel="Shortcut Icon" href="assets/icons/movie-kids.ico"/>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light opacity">
-    <a class="col-2 " href="#"><img class="col" src="../assets/images/logokids.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<body class="bg-fondo">
+  <nav class="navbar navbar-expand-lg grey fixed-top navbar-light">
+    <a class="d-none d-sm-none d-md-inline-flex d-lg-inline-flex d-xl-inline-flex col-md-3 col-lg-2 col-xl-2" href="#"><img class="col-12" src="../assets/images/logokids.png"></a>
+    <a class="col-sm-5 col-6 d-inline-flex d-sm-inline-flex d-md-none d-lg-none d-xl-none" href="#"><img class="col" src="../assets/images/cameraMK.png"></a>
+    <div class="col-5 d-none d-sm-none d-md-none d-lg-inline-flex d-xl-inline-flex">
+      <input class="col-10 form-control" type="search" placeholder="¿Qué película estas buscando?" aria-label="Search">
+      <div class="col-1 form-control-append">
+        <a class="fa fa-search" aria-hidden="true"></a>
+      </div>
+    </div>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="row">
+        <img class="d-lg-inline-flex wh-user-example" src="../assets/images/user-example.jpg">
+        <span class="ml-2 d-none d-sm-none d-md-inline-flex d-lg-inline-flex d-xl-inline-flex centrar" id="name-user"> nombre de usuario</span>
+      </div>
     </button>
-    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="col-7 navbar-nav mr-auto">
-        <li class="col-10 nav-item active">
-          <input class="col-10 form-control d-inline-flex" type="search" placeholder="¿Qué película estas buscando?" aria-label="Search">
-          <div class="col-1 form-control-append d-inline-flex">
-            <span class="fa fa-search" aria-hidden="true"></span>
-          </div>
-        </li>
-      </ul>
-      <ul class="col-1 navbar-nav ml-3 mr-auto">
+      <ul class="col-1 navbar-nav ml-auto mr-auto d-none d-sm-none d-md-none d-lg-inline-flex d-xl-inline-flex">
         <div class="row">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,14 +44,28 @@
           </li>
         </div>
       </ul>
-      <ul class="col-1 navbar-nav mr-auto">
+      <ul class="col-7 navbar-nav mr-auto d-none d-sm-none d-md-none d-lg-inline-flex d-xl-inline-flex">
         <li class="nav-item dropdown mr-auto">
           <a class="nav-link dropdown-toggle black-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img class="wh-user-example" src="../assets/images/user-example.jpg" alt="">
+            <div class="row">
+              <img class="d-lg-inline-flex wh-user-example" src="../assets/images/user-example.jpg" alt="">
+              <span class="ml-2 centrar" id="name-user"> nombre de usuario</span>
+            </div>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Salir <span class="float-right fa fa-power-off" aria-hidden="true"></span></a>
           </div>
+        </li>
+      </ul>
+      <ul class="col-12 navbar-nav d-inline-flex d-sm-inline-flex d-md-inline-flex d-lg-none d-xl-none">
+        <li class="nav-item dropdown">
+          Salir
+        </li>
+        <li class="nav-item dropdown">
+          Favoritos
+        </li>
+        <li class="nav-item dropdown">
+          Añadir una lista
         </li>
       </ul>
     </div>

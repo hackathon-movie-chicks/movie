@@ -8,7 +8,7 @@ function begin() {
     var randomNumber = Math.floor((Math.random() * randomMovieArray.length));
     var randomMovie = randomMovieArray[randomNumber];
     console.log(randomMovie);
-    $.getJSON('http://www.omdbapi.com/?i=' + encodeURI(randomMovie) + '&apikey=3a181f1c').then(function(response) {
+    $.getJSON('https://www.omdbapi.com/?i=' + encodeURI(randomMovie) + '&apikey=3a181f1c').then(function(response) {
       var image = response.Poster;
 
       if (image !== 'N/A') {

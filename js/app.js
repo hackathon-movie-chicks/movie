@@ -1,10 +1,24 @@
 $(document).ready(function() {
   var $inputSearch = $('#title');
   var $btnSearch = $('#searchBtn');
+  var $btnFilter = $('#btn-filter');
+  var $showFilter = $('#filter-movile');
+  var $closeFilter = $('#closeFilter');
+
+  $btnFilter.click(function() {
+    $showFilter.removeClass('d-none');
+    $showFilter.addClass('d-inline-flex');
+  });
+
+  $closeFilter.click(function() {
+    $showFilter.removeClass('d-inline-flex');
+    $showFilter.addClass('d-none');
+  });
+
   $btnSearch.click(searchByTitle);
   function searchByTitle() {
     var movieTitle = $inputSearch.val();
-    var url = 'http://www.omdbapi.com/?s=' + movieTitle + '&apikey=3a181f1c';
+    var url = 'https://www.omdbapi.com/?s=' + movieTitle + '&apikey=3a181f1c';
 
     $.ajax({
       url: url,
@@ -84,7 +98,7 @@ $(document).ready(function() {
     for (var search in movies) {
       var movie = movies[search];
       var imdbID = movie.imdbID;
-      $.getJSON('http://www.omdbapi.com/?apikey=3a181f1c&i=' + imdbID + '&type=movie', function(data) {
+      $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&i=' + imdbID + '&type=movie', function(data) {
         var keys = Object.keys(data);
         console.log(data);
         var word = data[keys[5]];
@@ -102,10 +116,36 @@ $(document).ready(function() {
         console.log(data.Poster);
         if (result === true || resultTwo === true) {
           resultsUl.append(
-            '<li class="li-images data-toggle="modal" data-target=' + '"#' + data.imdbID + '">' +
+            '<li class="li-images" data-toggle="modal" data-target=' + '"#' + data.imdbID + '">' +
               '<p>' + data.Title + '</p>' +
               '<img class="w-h-example" src="' + data.Poster + '" />' +
             '</li>'
+          );
+          $('#modals').append(
+            //  Modal
+            //   Modal
+            '<div class="modal fade" id="' + data.imdbID + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">' +
+              '<div class="modal-dialog modal-dialog-centered" role="document">' +
+                '<div class="modal-content">' +
+                  '<div class="modal-header">' +
+                    '<h5 class="modal-title" id="exampleModalLongTitle">' + data.Title + '</h5>' +
+                    '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                      '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                  '</div>' +
+                  '<div class="modal-body">' +
+                    '<img class="img-modal" src="' + data.Poster + '" />' +
+                    '<p>Actors : ' + data.Actors + '</p>' +
+                    '<p>Synopsis : ' + data.Plot + '</p>' +
+                    '<p>Year : ' + data.Year + '</p>' +
+                    '<p>Classification : ' + data.Rated + '</p>' +
+                  '</div>' +
+                  '<div class="modal-footer">' +
+                    '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
           );
         }
         //  verificando checkboxs
@@ -129,15 +169,16 @@ $(document).ready(function() {
         $('#rated4').on('click', checked);
         function checked() {
           resultsUl.hide();
+          $('#modalsCheck').hide();
           if (event.target.checked) {
             if (tagProduction(event.target.value, stringProduction) || tagProduction(event.target.value, stringRated)) {
               resultCheckboxs.append(
-                '<li class="li-images data-toggle="modal" data-target=' + '"#' + data.imdbID + '">' +
+                '<li class="li-images" data-toggle="modal" data-target=' + '"#' + data.imdbID + '">' +
                   '<p>' + data.Title + '</p>' +
                   '<img class="w-h-example" src="' + data.Poster + '" />' +
                 '</li>'
               );
-              $('#modals').append(
+              $('#modalsCheck').append(
                 //   Modal
                 '<div class="modal fade" id="' + data.imdbID + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">' +
                   '<div class="modal-dialog modal-dialog-centered" role="document">' +
@@ -149,7 +190,7 @@ $(document).ready(function() {
                         '</button>' +
                       '</div>' +
                       '<div class="modal-body">' +
-                        '<img class="w-h-example-mini" src="' + data.Poster + '" />' +
+                        '<img class="img-modal" src="' + data.Poster + '" />' +
                         '<p>Actors : ' + data.Actors + '</p>' +
                         '<p>Synopsis : ' + data.Plot + '</p>' +
                         '<p>Year : ' + data.Year + '</p>' +
@@ -157,7 +198,6 @@ $(document).ready(function() {
                       '</div>' +
                       '<div class="modal-footer">' +
                         '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>' +
-                        '<button type="button" class="btn btn-primary">Save changes</button>' +
                       '</div>' +
                     '</div>' +
                   '</div>' +
@@ -166,11 +206,23 @@ $(document).ready(function() {
             }
           } else {
             resultsUl.show();
+            $('#modalsCheck').show();
             resultCheckboxs.empty();
           }
         };
       });
     }
+  }
+
+  var $favorites = $('#favorites');
+  var $addList = $('#add-list');
+
+  $addList.on('click', addList);
+  $('#add-item').on('click', addItems);
+  function addItems() {
+    $('#container-items').append(
+      '<li><i class="fa fa-check-square-o" aria-hidden="true"></i></i><input type="text" name="" placeholder="Escribe aquí..."><i class="fa fa-trash" aria-hidden="true"></i></li>'
+    );
   }
 
   function renderError(error) {
@@ -183,4 +235,24 @@ function tagProduction(nameProduction, string) {
   result = regex.test(string);
   return result;
   console.log(result);
+}
+
+function addList() {
+  $addList.append(
+    '<div class="container-list">' +
+      '<ul>' +
+        '<li class="li-list">' +
+          '<input type="text" value=" Escribe aquí...">' +
+        '</li>' +
+      '</ul>' +
+      '<button type="button"></button>' +
+    '</div>'
+  );
+
+  function addItems() {
+    alert('hi');
+    $('#container-items').append(
+      '<li><i class="fa fa-check-square-o" aria-hidden="true"></i></i><input type="text" name="" placeholder="Escribe aquí..."><i class="fa fa-trash" aria-hidden="true"></i></li>'
+    );
+  }
 }

@@ -223,3 +223,23 @@ div.form-check {
   margin-bottom: 15px;
   margin-top: 15px;
 }
+
+.name {
+  color: antiquewhite;
+  font-size: 20px;
+}
+
+.game {
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.game:hover{
+  color: yellowgreen;
+  font-size: 30px;
+}
+
+.h-card {
+  height: 450px;
+}

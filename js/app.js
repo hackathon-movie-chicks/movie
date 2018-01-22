@@ -102,10 +102,17 @@ $(document).ready(function() {
         console.log(data.Poster);
         if (result === true || resultTwo === true) {
           resultsUl.append(
-            '<li class="li-images" data-toggle="modal" data-target=' + '"#' + data.imdbID + '">' +
-              '<p>' + data.Title + '</p>' +
-              '<img class="w-h-example" src="' + data.Poster + '" />' +
-            '</li>'
+            '<div class="li-images col-5 d-inline-flex mb-4 h-card"  data-toggle="modal" data-target=' + '"#' + data.imdbID + '">' +
+              '<div class="card rounded p-2">' +
+              '<div class="card-body justify-content-center">' +
+              '<h3 class="card-title bold">' + data.Title + '</h3>' +
+              '<hr>' +
+              '<div class="row centrar">' +
+              '<img class="w-h-example rounded" src="' + data.Poster + '" />' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+            '</div>'
           );
           $('#modals').append(
             //  Modal
@@ -114,7 +121,7 @@ $(document).ready(function() {
               '<div class="modal-dialog modal-dialog-centered" role="document">' +
                 '<div class="modal-content">' +
                   '<div class="modal-header">' +
-                    '<h5 class="modal-title" id="exampleModalLongTitle">' + data.Title + '</h5>' +
+                    '<h5 class="modal-title" id="exampleModalLongTitle ">' + data.Title + '</h5>' +
                     '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
                       '<span aria-hidden="true">&times;</span>' +
                     '</button>' +

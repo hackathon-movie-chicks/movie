@@ -23,8 +23,8 @@
        <span id="name-user" class="d-none d-md-inline-block name">nombre de usuario</span><img id="photo-user" class="d-lg-inline-flex img-user" alt="">
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Favoritos</a>
-        <a class="dropdown-item" href="#">Agregar lista</a>
+        <a id="favorites" class="dropdown-item" data-toggle="modal" data-target="#modal-favorites" href="#">Favoritos</a>
+        <a id="add-list" class="dropdown-item" href="#">Agregar lista</a>
         <a id="signOut" class="dropdown-item" href="#">Cerrar</a>
       </div>
     </div>
@@ -32,13 +32,13 @@
   <section class="container">
     <div class="row p-4">
       <div class="col-md-8">
-        <input id="title" class="form-control mr-sm-0 m-2" type="search" placeholder="Ejemplo: barbie" aria-label="Search">  
+        <input id="title" class="form-control mr-sm-0 m-2" type="search" placeholder="Ejemplo: barbie" aria-label="Search">
         <button id="searchBtn" class="btn btn-outline-success m-2" type="submit">Search</button>
         <div id="results" class="row justify-content-around"></div>
         <div id="results-checkboxs"></div>
         <div id="modals"></div>
         <div id="modalsCheck"></div>
-      </div> 
+      </div>
       <div class="col-md-4">
           <div class="card rounded">
               <div class="card-body">
@@ -108,16 +108,34 @@
                 </div>
               </div>
             </div>
-      </div> 
+      </div>
     </div>
-   
   </section>
-
-
+  <!-- Modal de lista Favoritos -->
+  <div class="modal fade" id="modal-favorites" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Favoritos   <i class="fa fa-star" aria-hidden="true"></i></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="container-items" class="modal-body">
+          <li><i class="fa fa-check-square-o" aria-hidden="true"></i></i><input type="text" name="" placeholder="Escribe aquí..."><i class="fa fa-trash" aria-hidden="true"></i></li>
+        </div>
+        <div class="modal-footer">
+          <button id="add-item" type="button" class="btn btn-secondary">Nueva Lista</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src = " https : // use.fontawesome . com / 41c1af74a7.js " ></script>
   <!-- <script src="../js/autentication.js"></script> -->
   <script src="../js/autentication.js"></script>
   <script src="../js/app.js"></script>

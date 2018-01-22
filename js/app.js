@@ -216,8 +216,10 @@ $(document).ready(function() {
 
   var $favorites = $('#favorites');
   var $addList = $('#add-list');
+  var $deleteItem = $('#delete-item');
 
-  $addList.on('click', addList);
+  $deleteItem.on('click', deleteItem);
+
   $('#add-item').on('click', addItems);
   function addItems() {
     $('#container-items').append(
@@ -237,22 +239,14 @@ function tagProduction(nameProduction, string) {
   console.log(result);
 }
 
-function addList() {
-  $addList.append(
-    '<div class="container-list">' +
-      '<ul>' +
-        '<li class="li-list">' +
-          '<input type="text" value=" Escribe aquí...">' +
-        '</li>' +
-      '</ul>' +
-      '<button type="button"></button>' +
-    '</div>'
+function addItems() {
+  alert('hi');
+  $('#container-items').append(
+    '<li><i class="fa fa-check-square-o" aria-hidden="true"></i></i><input type="text" name="" placeholder="Escribe aquí..."><i class="fa fa-trash" aria-hidden="true"></i></li>'
   );
+}
 
-  function addItems() {
-    alert('hi');
-    $('#container-items').append(
-      '<li><i class="fa fa-check-square-o" aria-hidden="true"></i></i><input type="text" name="" placeholder="Escribe aquí..."><i class="fa fa-trash" aria-hidden="true"></i></li>'
-    );
-  }
+function deleteItem(event) {
+  var trash = event.target;
+  console.log($(event.target).parent()[0]);
 }
